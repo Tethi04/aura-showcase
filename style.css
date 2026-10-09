@@ -1,0 +1,397 @@
+/* ==========================================================================
+   1. Pastel Color Palette & CSS Variables
+   ========================================================================== */
+:root {
+  --veranda-blue: #6BB1AD;
+  --sky-cloud: #A7BCBD;
+  --lychee: #EDECDB;
+  --melon: #E5A9A9;
+  --cupid-pink: #E6748E;
+
+  --bg-gradient: linear-gradient(135deg, #edecdb 0%, #a7bcbd 50%, #6bb1ad 100%);
+  --glass-card: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 12px 32px 0 rgba(107, 177, 173, 0.18);
+  
+  --text-dark: #2c3e3d;
+  --text-muted: #5c7573;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. Reset & Layout Setup
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Floating Pastel Mesh Blobs */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.6;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.blob-1 { width: 350px; height: 350px; background: var(--cupid-pink); top: -50px; left: -50px; }
+.blob-2 { width: 400px; height: 400px; background: var(--melon); bottom: -100px; right: -50px; }
+.blob-3 { width: 300px; height: 300px; background: var(--veranda-blue); top: 40%; left: 50%; transform: translate(-50%, -50%); }
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+/* Standard Glassmorphism Container */
+.glass-panel {
+  background: var(--glass-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+}
+
+/* ==========================================================================
+   3. Header Navbar
+   ========================================================================== */
+.navbar-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  padding: 1rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon {
+  font-size: 1.6rem;
+  background: var(--lychee);
+  padding: 0.4rem;
+  border-radius: 12px;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: block;
+}
+
+.status-indicator {
+  font-size: 0.75rem;
+  color: #2e7d32;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4caf50;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.time-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  color: var(--veranda-blue);
+  border: 1px solid var(--glass-border);
+}
+
+.btn-github {
+  text-decoration: none;
+  background: var(--veranda-blue);
+  color: #fff;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.btn-github:hover {
+  background: #5a9e9a;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. Hero & Main Layout
+   ========================================================================== */
+.main-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-card {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cupid-pink);
+  background: rgba(230, 116, 142, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  max-width: 650px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.deployment-status-box {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.status-item strong {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.status-item span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   5. Showcase Grid
+   ========================================================================== */
+.section-title-box h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.section-title-box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.card.active-task {
+  border: 2px solid var(--cupid-pink);
+}
+
+.card-tag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(107, 177, 173, 0.2);
+  color: var(--veranda-blue);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.card-tag.highlight {
+  background: rgba(230, 116, 142, 0.2);
+  color: var(--cupid-pink);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   6. Share Card & Footer
+   ========================================================================== */
+.share-card {
+  padding: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.share-info h3 {
+  font-size: 1.1rem;
+}
+
+.share-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.url-input-group {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 450px;
+}
+
+#site-url {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-border);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cupid-pink), var(--melon));
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(230, 116, 142, 0.35);
+}
+
+.footer {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .hero-title { font-size: 1.75rem; }
+  .share-card { flex-direction: column; align-items: stretch; }
+  .url-input-group { max-width: 100%; flex-direction: column; }
+  }
+  
