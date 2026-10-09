@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princess's Workspace | GitHub Pages Showcase</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Floating Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Header Section -->
+  <header class="navbar-container">
+    <nav class="navbar glass-panel">
+      <div class="nav-brand">
+        <span class="brand-icon">🌸</span>
+        <div>
+          <span class="brand-name">Aura Showcase</span>
+          <span class="status-indicator"><span class="dot"></span> Live on GitHub Pages</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <span id="live-time" class="time-pill">00:00:00 PM</span>
+        <a href="https://github.com/Tethi04" target="_blank" class="btn btn-github">
+          <span>GitHub</span> ↗
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Showcase Container -->
+  <main class="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="hero-card glass-panel">
+      <div class="hero-badge">Elevate Labs • Web Development Internship • Task 5</div>
+      <h1 class="hero-title">Static Web Deployment Portal</h1>
+      <p class="hero-subtitle">
+        Welcome to my live deployed workspace! Hosted seamlessly for free using GitHub Pages with continuous deployment from source control.
+      </p>
+      
+      <div class="deployment-status-box">
+        <div class="status-item">
+          <strong>Hosting Provider</strong>
+          <span>GitHub Pages (CDN)</span>
+        </div>
+        <div class="status-item">
+          <strong>Protocol</strong>
+          <span>HTTPS Secure</span>
+        </div>
+        <div class="status-item">
+          <strong>Branch</strong>
+          <span><code>main</code> / root</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internship Showcase Grid -->
+    <section class="showcase-section">
+      <div class="section-title-box">
+        <h2>Completed Internship Deliverables</h2>
+        <p>A collection of web development tasks built during the Elevate Labs Internship.</p>
+      </div>
+
+      <div class="grid-container">
+        
+        <!-- Task 1 -->
+        <div class="card glass-panel">
+          <div class="card-tag">Task 1</div>
+          <h3>Responsive Landing Page</h3>
+          <p>A pastel glassmorphic landing page with smooth navigation and adaptive layouts.</p>
+          <div class="tech-stack">
+            <span>HTML5</span><span>CSS3</span><span>Flexbox</span>
+          </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="card glass-panel">
+          <div class="card-tag">Task 2</div>
+          <h3>Aura Tasks To-Do App</h3>
+          <p>Interactive task manager featuring dynamic CRUD, localStorage sync, and modal calendar.</p>
+          <div class="tech-stack">
+            <span>Vanilla JS</span><span>LocalStorage</span><span>Modal UI</span>
+          </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="card glass-panel">
+          <div class="card-tag">Task 3</div>
+          <h3>Bookstore REST API</h3>
+          <p>Node.js & Express API serving CRUD endpoints with JSON validation and middleware.</p>
+          <div class="tech-stack">
+            <span>Node.js</span><span>Express</span><span>REST API</span>
+          </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="card glass-panel">
+          <div class="card-tag">Task 4</div>
+          <h3>Mobile Media Queries</h3>
+          <p>Responsive design transformation with mobile drawer menu and fluid breakpoints.</p>
+          <div class="tech-stack">
+            <span>Media Queries</span><span>Responsive</span><span>Mobile First</span>
+          </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="card glass-panel active-task">
+          <div class="card-tag highlight">Task 5</div>
+          <h3>GitHub Pages Deployment</h3>
+          <p>Production deployment of static assets to a public domain hosted on GitHub infrastructure.</p>
+          <div class="tech-stack">
+            <span>Git</span><span>GitHub Pages</span><span>CI/CD</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Deployment URL Share Card -->
+    <section class="share-card glass-panel">
+      <div class="share-info">
+        <h3>✨ Live Site URL</h3>
+        <p>Share this domain for live portfolio demonstrations:</p>
+      </div>
+      <div class="url-input-group">
+        <input type="text" id="site-url" value="https://tethi04.github.io/" readonly>
+        <button id="copy-btn" class="btn btn-primary">Copy Link</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer glass-panel">
+    <p>© 2026 Tethi Biswas. Deployed with ❤️ via GitHub Pages.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+  </html>
+  
