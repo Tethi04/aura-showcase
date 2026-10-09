@@ -1,11 +1,11 @@
 # 🌸 Aura Showcase — GitHub Pages Static Web Portal
 
-<p align="center">
-  <img src="[https://img.shields.io/badge/GitHub-Pages-22272E?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-Pages-22272E?style=for-the-badge&logo=github&logoColor=white)" alt="GitHub Pages" />
-  <img src="[https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)" alt="HTML5" />
-  <img src="[https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white](https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)" alt="CSS3" />
-  <img src="[https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)" alt="JavaScript" />
-  <img src="[https://img.shields.io/badge/Status-Live_200_OK-4CAF50?style=for-the-badge](https://img.shields.io/badge/Status-Live_200_OK-4CAF50?style=for-the-badge)" alt="Live Status" />
+  <p align="center">
+  <img src="https://img.shields.io/badge/GitHub-Pages-22272E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Status-Live_200_OK-4CAF50?style=for-the-badge" alt="Live Status" />
 </p>
 
 An aesthetic, interactive static web deployment portal built for **Elevate Labs Web Development Internship — Task 5: Deploy a Static Website Using GitHub Pages**. 
